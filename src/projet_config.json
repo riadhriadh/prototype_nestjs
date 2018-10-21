@@ -1,0 +1,9 @@
+{
+  "secret": "secret",
+  "type": "mysql",
+  "host": "localhost",
+  "port": null,
+  "username": "root",
+  "password": null,
+  "database": "prof"
+}
