@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as jwt from 'jsonwebtoken';
-import { UsersService } from '../users/users.service';
+import { UsersService } from 'users/users.service';
 const  config_projet =require("../projet_config");
 @Injectable()
 export class AuthService {
@@ -9,7 +9,7 @@ export class AuthService {
     const expiresIn = 6000 * 60;
     const secretOrKey = 'secret';
     const user = { email };
-    const token = jwt.sign(user, secretOrKey, { expiresIn });
+    const token = jwt.sign(user,  secretOrKey, { expiresIn });
     return { expires_in: expiresIn, token };
   }
   async validateUser(signedUser): Promise<boolean> {

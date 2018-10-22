@@ -9,6 +9,10 @@ export class CatsController {
  @Get()
  async findAll(@Query() query): Promise<Cat[]> {
     return this.catsService.findAll();
+    throw new HttpException({
+        status: HttpStatus.FORBIDDEN,
+        error: 'This is a custom message',
+      }, 403);
   } 
 
  @Post('create')

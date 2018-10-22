@@ -4,7 +4,7 @@
     "port": null,
     "username": "root",
     "password": null,
-    "database": "",
+    "database": "prof",
     "entities": ["src/**/**.entity{.ts,.js}"],
     "synchronize": true
   }

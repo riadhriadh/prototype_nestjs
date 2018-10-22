@@ -9,9 +9,9 @@ import { Connection } from 'typeorm';
 import { UsersController } from 'users/users.controller';
 import { UsersService } from 'users/users.service';
 import { UsersModule } from 'users/users.module';
-import { AuthService } from './auth/auth.service';
- import { AuthController } from './auth/auth.controller';
-import { LoggerMiddleware } from './logger.middleware';
+import { AuthService } from 'auth/auth.service';
+ import { AuthController } from 'auth/auth.controller';
+import { LoggerMiddleware } from 'logger.middleware';
 
 @Module({
   imports: [TypeOrmModule.forRoot(),CatsModule, UsersModule],
@@ -26,6 +26,7 @@ export class AppModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(LoggerMiddleware)
-      .forRoutes({ path: 'cats', method: RequestMethod.GET });
+      .forRoutes({ path: '/cats', method: RequestMethod.GET });
+      
   }
 }
