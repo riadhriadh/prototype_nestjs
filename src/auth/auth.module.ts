@@ -9,9 +9,9 @@ import {
 import { AuthService } from './auth.service';
 import { JwtStrategy } from './passport/jwt.strategy';
 import { AuthController } from './auth.controller';
-import { UsersModule } from '../users/users.module';
-import {CatsModule} from '../cats/cats.module';
-import {CatsController} from '../cats/cats.controller'
+import { UsersModule } from 'users/users.module';
+import {CatsModule} from 'cats/cats.module';
+import {CatsController} from 'cats/cats.controller'
 
 @Module({
   imports: [UsersModule,CatsModule],
